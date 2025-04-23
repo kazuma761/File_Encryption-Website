@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-green: #0fff95;
+  --neon-cyan: #00ffff;
+}
+
+body {
+  background: linear-gradient(to bottom, #0f0f1f, #1a1a3a);
+  color: white;
+  min-height: 100vh;
+}
+
+.space-bg {
+  background: radial-gradient(circle at center, transparent 0%, #0f0f1f 100%),
+              url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='white' fill-opacity='0.1'%3E%3Ccircle cx='10' cy='10' r='1'/%3E%3Ccircle cx='30' cy='40' r='1'/%3E%3Ccircle cx='50' cy='20' r='1'/%3E%3Ccircle cx='70' cy='50' r='1'/%3E%3Ccircle cx='90' cy='30' r='1'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.neon-border {
+  border: 2px solid var(--neon-cyan);
+  box-shadow: 0 0 10px var(--neon-cyan);
+}
+
+.neon-text {
+  color: var(--neon-green);
+  text-shadow: 0 0 5px var(--neon-green);
+}
+
+.neon-button {
+  background: transparent;
+  border: 2px solid var(--neon-green);
+  color: var(--neon-green);
+  text-shadow: 0 0 5px var(--neon-green);
+  box-shadow: 0 0 10px var(--neon-green);
+  transition: all 0.3s ease;
+}
+
+.neon-button:hover {
+  background: var(--neon-green);
+  color: #0f0f1f;
+  box-shadow: 0 0 20px var(--neon-green);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
